@@ -6,6 +6,13 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .circles {
   height: 100vh;
   width: 100vw;
@@ -14,9 +21,12 @@
   flex-direction: column;
   overflow: hidden;
   z-index: -10;
+  left: 0;
+  top: 0;
 }
 .circles .top {
   position: relative;
+  animation: move-left 0.8s;
 }
 .circles .top .inner {
   position: relative;
@@ -52,6 +62,7 @@
 .circles .bottom {
   position: relative;
   rotate: 180deg;
+  animation: move-right 0.8s;
 }
 .circles .bottom .inner {
   position: relative;
@@ -85,17 +96,66 @@
   rotate: -5deg;
 }
 
+.images {
+  z-index: -9;
+}
+.images .img {
+  width: 15rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.images .img img {
+  width: 15rem;
+  border-radius: 20px;
+  border: 5px solid #d2302c;
+}
+.images .img::before {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  border: 1px solid #d2302c;
+  top: -100vh;
+  z-index: -1;
+}
+.images .img:nth-child(1) {
+  left: 10vw;
+  top: 30vh;
+  animation: move-down 1s ease alternate infinite;
+}
+.images .img:nth-child(2) {
+  left: 20vw;
+  bottom: 15vh;
+  animation: move-up 1s ease alternate infinite;
+}
+.images .img:nth-child(3) {
+  right: 20vw;
+  bottom: 15vh;
+  animation: move-up 1s ease alternate infinite;
+}
+.images .img:nth-child(4) {
+  right: 10vw;
+  top: 25vh;
+  animation: move-down 1s ease alternate infinite;
+}
+
 header {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  top: 1rem;
 }
 header .brand {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  animation: fade-in 0.5s ease;
 }
 header .brand img {
   width: 10rem;
@@ -106,4 +166,80 @@ header .brand span {
   position: absolute;
   bottom: -2px;
   font-weight: 500;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  animation: fade-in 0.5s ease;
+}
+main h1 {
+  font-size: 3.3rem;
+  color: #d2302c;
+}
+main p {
+  font-size: 1.2rem;
+  width: 40rem;
+  text-align: center;
+}
+main p span {
+  color: #d2302c;
+  font-weight: 600;
+}
+
+footer {
+  position: fixed;
+  bottom: 2rem;
+  left: 0;
+  width: 100vw;
+  padding: 0 2rem;
+  animation: fade-in 1s ease;
+}
+footer span {
+  color: #d2302c;
+  font-weight: 700;
+}
+
+@keyframes move-down {
+  from {
+    margin-top: -20px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+@keyframes move-left {
+  from {
+    margin-left: -50px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes move-right {
+  from {
+    margin-right: -40px;
+  }
+  to {
+    margin-right: 0;
+  }
+}
+@keyframes move-up {
+  from {
+    margin-bottom: -20px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=main.css.map */
