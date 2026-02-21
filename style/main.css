@@ -197,6 +197,7 @@ main button {
   cursor: pointer;
   background: #d2302c;
   color: #fff;
+  margin-top: 2rem;
 }
 main button:hover {
   background: transparent;
