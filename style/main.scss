@@ -11,6 +11,7 @@ $white: #fff;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  color: $white;
 }
 
 body {
@@ -18,6 +19,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: $black;
 }
 
 .circles {
@@ -127,14 +129,14 @@ body {
       border: 5px solid $primary;
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      height: 100vh;
-      border: 1px solid $primary;
-      top: -100vh;
-      z-index: -1;
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   height: 100vh;
+    //   border: 1px solid $primary;
+    //   top: -100vh;
+    //   z-index: -1;
+    // }
 
     &:nth-child(1) {
       left: 10vw;
@@ -241,21 +243,30 @@ footer {
   width: 100vw;
   padding: 0 2rem;
   animation: fade-in 1s ease;
+  display: flex;
+  justify-content: space-between;
 
   span {
     color: $primary;
     font-weight: 700;
   }
+
+  #owner {
+    margin-right: 5rem;
+    span {
+      color: $black;
+    }
+  }
 }
 
-@keyframes move-down {
-  from {
-    margin-top: -20px;
-  }
-  to {
-    margin-top: 0;
-  }
-}
+// @keyframes move-down {
+//   from {
+//     margin-top: -20px;
+//   }
+//   to {
+//     margin-top: 0;
+//   }
+// }
 
 @keyframes move-left {
   from {
@@ -275,14 +286,14 @@ footer {
   }
 }
 
-@keyframes move-up {
-  from {
-    margin-bottom: -20px;
-  }
-  to {
-    margin-top: 0;
-  }
-}
+// @keyframes move-up {
+//   from {
+//     margin-bottom: -20px;
+//   }
+//   to {
+//     margin-top: 0;
+//   }
+// }
 
 @keyframes fade-in {
   from {

@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  color: #fff;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #000;
 }
 
 .circles {
@@ -111,14 +113,6 @@ body {
   border-radius: 20px;
   border: 5px solid #d2302c;
 }
-.images .img::before {
-  content: "";
-  position: absolute;
-  height: 100vh;
-  border: 1px solid #d2302c;
-  top: -100vh;
-  z-index: -1;
-}
 .images .img:nth-child(1) {
   left: 10vw;
   top: 30vh;
@@ -211,20 +205,20 @@ footer {
   width: 100vw;
   padding: 0 2rem;
   animation: fade-in 1s ease;
+  display: flex;
+  justify-content: space-between;
 }
 footer span {
   color: #d2302c;
   font-weight: 700;
 }
-
-@keyframes move-down {
-  from {
-    margin-top: -20px;
-  }
-  to {
-    margin-top: 0;
-  }
+footer #owner {
+  margin-right: 5rem;
 }
+footer #owner span {
+  color: #000;
+}
+
 @keyframes move-left {
   from {
     margin-left: -50px;
@@ -239,14 +233,6 @@ footer span {
   }
   to {
     margin-right: 0;
-  }
-}
-@keyframes move-up {
-  from {
-    margin-bottom: -20px;
-  }
-  to {
-    margin-top: 0;
   }
 }
 @keyframes fade-in {
