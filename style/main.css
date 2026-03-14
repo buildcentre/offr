@@ -215,7 +215,10 @@ footer span {
 footer #owner {
   margin-right: 5rem;
 }
-footer #owner span {
+footer #owner a {
+  text-decoration: none;
+}
+footer #owner a span {
   color: #000;
 }
 

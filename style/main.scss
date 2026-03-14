@@ -253,8 +253,11 @@ footer {
 
   #owner {
     margin-right: 5rem;
-    span {
-      color: $black;
+    a {
+      text-decoration: none;
+      span {
+        color: $black;
+      }
     }
   }
 }
